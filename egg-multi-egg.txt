@@ -1,0 +1,262 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-12-11T19:31:23+02:00",
+    "name": "Multi Egg",
+    "author": "itznya10@gmail.com",
+    "description": "High performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.",
+    "features": null,
+    "image": "quay.io\/lapamakelakaopknj\/gfjdklgtr09e8y0968jhkbjn:java8-openj9",
+    "startup": ".\/minecraft.sh",
+    "config": {
+        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \")! For help, type \",\r\n    \"userInteraction\": [\r\n        \"Go to eula.txt for more info.\"\r\n    ]\r\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho hi",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "NodeJS",
+            "description": "NodeJS version",
+            "env_variable": "NODEJS_VERSION",
+            "default_value": "14",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Other options mode",
+            "description": "",
+            "env_variable": "OTHER_THINGS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github user",
+            "description": "Github username",
+            "env_variable": "GITHUB_USER",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github token\/password",
+            "description": "Github token\/password",
+            "env_variable": "GITHUB_OAUTH_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Golang version",
+            "description": "",
+            "env_variable": "GOLANG_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github repository",
+            "description": "Github",
+            "env_variable": "GITHUB_REPO",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github Email",
+            "description": "Github",
+            "env_variable": "GITHUB_EMAIL",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github Action",
+            "description": "You want to pull\/clone?\r\nAccepted values is pull\/clone",
+            "env_variable": "GITHUB_ACTION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Java Version",
+            "description": "",
+            "env_variable": "JAVA_VERSION",
+            "default_value": "adopt@1.8-0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Python version",
+            "description": "",
+            "env_variable": "PYTHON_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Github pull\/clone feature",
+            "description": "Would you like to use Github pull\/clone feature?\r\nAccepted values is yes",
+            "env_variable": "GITHUB_FEATURE",
+            "default_value": "no",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Mindustry map",
+            "description": "Default Maps Available: Ancient Caldera, Fork, Fortress, Glacier, Islands, Labyrinth, Maze, Shattered, Tendrils, Triad, Veins, Wasteland.",
+            "env_variable": "MAPNAME",
+            "default_value": "Ancient",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "SinusBot admin account",
+            "description": "SinusBot",
+            "env_variable": "OVERRIDE_PASSWORD",
+            "default_value": "change-this",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Rage.MP server name",
+            "description": "Server name that will be displayed to the master server.  (64 Char max)",
+            "env_variable": "SERVER_NAME",
+            "default_value": "RAGE:MP Unofficial server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:64"
+        },
+        {
+            "name": "Rage.MP max players",
+            "description": "Maximum number of players your server will hold.  (Max 100)",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "50",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|integer|between:1,100"
+        },
+        {
+            "name": "Rage.MP announce",
+            "description": "Announce to the master server so people can see you in their server browser. This needs to be a 0 (false) or 1 (true) due to weird boolean parsing.",
+            "env_variable": "ANNOUNCE",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|boolean"
+        },
+        {
+            "name": "Redis admin account password",
+            "description": "Redis",
+            "env_variable": "REDIS_PASSWORD",
+            "default_value": "replace-this",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "RethinkDB web interface port",
+            "description": "RethinkDB",
+            "env_variable": "HTTP_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "RethinkDB cluster port",
+            "description": "RethinkDB",
+            "env_variable": "CLUSTER_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "RethinkDB admin acount password",
+            "description": "RethinkDB",
+            "env_variable": "ADMIN_PASSWORD",
+            "default_value": "replace-this",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "TeamSpeak3 file transfer port",
+            "description": "TeamSpeak3",
+            "env_variable": "FILE_TRANSFER",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Java arguments",
+            "description": "Addition arguments for java",
+            "env_variable": "JAVA_ARGUMENT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Server optimization",
+            "description": "You want to use optimized java arguments?\r\nIf you want to use optimized argumets type yes at value field",
+            "env_variable": "JAVA_OPTIMIZED",
+            "default_value": "yes",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "PM2 arguments",
+            "description": "",
+            "env_variable": "PM2_ARGUMENTS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "MTA:SA http port",
+            "description": "",
+            "env_variable": "MTA_HTTP_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "MTA:SA ASE port",
+            "description": "",
+            "env_variable": "ASE_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        }
+    ]
+}	
